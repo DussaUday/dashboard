@@ -1,7 +1,7 @@
 export const uploadToCloudinary = async (file, onProgress = null) => {
   try {
     // 1️⃣ Get signature from backend
-    const res = await fetch("http://localhost:5000/api/cloudinary/get-signature");
+    const res = await fetch("https://sateesh-kumar-portfolio.onrender.com/api/cloudinary/get-signature");
     const { timestamp, signature, cloudName, uploadPreset, apiKey, folder } = await res.json();
 
     // 2️⃣ Build FormData
